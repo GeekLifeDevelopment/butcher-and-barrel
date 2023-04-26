@@ -27,6 +27,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `atehm0n85i7a`,
+        accessToken: `Z4bzDPxwNUcNYei6dZt-EpX9aLNRqCY1PyYXq4kUScI`,
+        host: `preview.contentful.com`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
