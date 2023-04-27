@@ -33,6 +33,7 @@ const HomePage = () => {
                 title={edge.node.heroTitle}
                 subTitle={edge.node.heroSubtitle}
                 description={edge.node.heroDescription}
+                heroImage={edge.node.heroImage.file.url}
               />
             )
           })}

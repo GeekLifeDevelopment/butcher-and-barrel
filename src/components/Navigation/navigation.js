@@ -24,7 +24,7 @@ const Navigation = () => {
             <nav>
               <ul className="butcher-logo">
                 <li>
-                  <img src={edge.node.butcherLogo[0].url} />
+                  <img src={edge.node.butcherLogo[1].url} />
                 </li>
               </ul>
               <ul className="main-links">
