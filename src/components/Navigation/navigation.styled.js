@@ -4,6 +4,7 @@ const NavStyles = styled.nav`
   nav {
     display: flex;
     align-items: center;
+    background-color: green;
   }
   .butcher-logo {
     list-style-type: none;
