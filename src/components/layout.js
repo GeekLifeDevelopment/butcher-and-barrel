@@ -1,8 +1,8 @@
 import React from "react"
 import GlobalStyles from "../styles/globalStyles"
 import { ThemeProvider } from "styled-components"
-import Navigation from "../components/Navigation/navigation"
-import Footer from "../components/Footer/footer"
+import Navigation from "./Navigation/navigation"
+import Footer from "./Footer/footer"
 import theme from "../styles/theme"
 
 const Layout = ({ children }) => {
