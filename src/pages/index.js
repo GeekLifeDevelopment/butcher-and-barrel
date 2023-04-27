@@ -1,9 +1,5 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 import { graphql, useStaticQuery } from "gatsby"
 
 const HomePage = () => {
