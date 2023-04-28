@@ -1,5 +1,5 @@
 const colors = {
-  white: "white",
+  white: "#fff",
 }
 
 const theme = {

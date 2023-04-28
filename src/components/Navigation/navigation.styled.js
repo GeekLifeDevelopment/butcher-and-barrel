@@ -8,6 +8,7 @@ const NavStyles = styled.nav`
     align-items: center;
     background-color: transparent;
     border-bottom: 1px solid grey;
+    z-index: 10;
   }
   .butcher-logo {
     list-style-type: none;
