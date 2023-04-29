@@ -45,14 +45,16 @@ const NavStyles = styled.nav`
 
   .mobile-nav {
     position: absolute;
+    left: ${props => props.navView};
     color: white;
-    z-index: 11;
-    top: 62px;
+    z-index: 9;
+    top: 63px;
     font-size: 2rem;
+    transition: 0.5s;
 
     ul {
       background-color: rgba(0, 0, 0, 0.8);
-      width: 100%;
+      width: 200px;
       height: 100%;
       padding: 2rem;
       list-style-type: none;
