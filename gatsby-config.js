@@ -35,6 +35,8 @@ module.exports = {
           {
             name: `PT Serif`,
             file: `'https://fonts.googleapis.com/css2?family=PT+Serif&display=swap'`,
+            name: `Inter`,
+            file: `'https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap'`,
           },
         ],
       },

@@ -33,6 +33,9 @@ const Navigation = () => {
                 <li>Barrel Room</li>
                 <li>Location</li>
               </ul>
+              <div className="bars">
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </nav>
           </>
         )

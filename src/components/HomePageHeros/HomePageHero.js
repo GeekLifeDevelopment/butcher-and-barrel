@@ -4,11 +4,12 @@ import Styles from "./HomePageHero.styled"
 const HomePageHero = ({ title, subTitle, description, heroImage }) => {
   return (
     <Styles>
+      <div className="overlay"></div>
       <img src={heroImage} />
       <div className="hero-content">
-        <h1>{title}</h1>
-        <h2>{subTitle}</h2>
-        <h2>{description}</h2>
+        <h1 className="hero-title">{title}</h1>
+        <h2 className="sub-title">{subTitle}</h2>
+        <h6 className="sub-description">{description}</h6>
       </div>
     </Styles>
   )
