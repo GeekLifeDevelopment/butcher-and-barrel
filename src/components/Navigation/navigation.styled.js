@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const NavStyles = styled.nav`
-  nav {
+  .main-nav {
     width: 100%;
     position: fixed;
     display: flex;
@@ -33,12 +33,32 @@ const NavStyles = styled.nav`
   .bars {
     width: 100%;
     margin: 0 2rem;
+    font-size: 1.5rem;
     display: none;
     text-align: right;
     justify-self: right;
     color: white;
     @media (max-width: 700px) {
       display: block;
+    }
+  }
+
+  .mobile-nav {
+    position: absolute;
+    color: white;
+    z-index: 11;
+    top: 62px;
+    font-size: 2rem;
+
+    ul {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      list-style-type: none;
+      li {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 `

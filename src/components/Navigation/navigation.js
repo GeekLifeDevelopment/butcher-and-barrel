@@ -21,7 +21,7 @@ const Navigation = () => {
       {data.allContentfulButcherLogo.edges.map(edge => {
         return (
           <>
-            <nav>
+            <nav className="main-nav">
               <ul className="butcher-logo">
                 <li>
                   <img src={edge.node.butcherLogo[1].url} />
@@ -36,6 +36,14 @@ const Navigation = () => {
               <div className="bars">
                 <i class="fa-solid fa-bars"></i>
               </div>
+            </nav>
+            <nav className="mobile-nav">
+              <ul>
+                <li>Food</li>
+                <li>Drink</li>
+                <li>Barrel Room</li>
+                <li>Location</li>
+              </ul>
             </nav>
           </>
         )
