@@ -4,9 +4,16 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const Navigation = () => {
   const [navView, setNavView] = useState("-300px")
+  const [navIcon, setNavIcon] = useState("fa-bars")
 
   const handleClick = () => {
-    navView === "-300px" ? setNavView("0") : setNavView("-300px")
+    if (navView === "-300px") {
+      setNavView("0")
+      setNavIcon("fa-x")
+    } else {
+      setNavView("-300px")
+      setNavIcon("fa-bars")
+    }
   }
 
   const data = useStaticQuery(graphql`
@@ -40,7 +47,7 @@ const Navigation = () => {
                 <li>Location</li>
               </ul>
               <div onClick={handleClick} className="bars">
-                <i class="fa-solid fa-bars"></i>
+                <i class={`fa-solid ${navIcon}`}></i>
               </div>
             </nav>
             <nav className="mobile-nav">
