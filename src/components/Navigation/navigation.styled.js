@@ -44,7 +44,7 @@ const NavStyles = styled.nav`
   }
 
   .mobile-nav {
-    position: absolute;
+    position: fixed;
     left: ${props => props.navView};
     color: white;
     z-index: 9;
