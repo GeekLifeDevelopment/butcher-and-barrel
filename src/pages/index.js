@@ -12,8 +12,27 @@ const HomePage = () => {
           node {
             heroTitle
             heroSubtitle
+            foodHeroTitle
+            foodHeroSubtitle
+            foodHeroDescription
+            drinkHeroTitle
+            drinkHeroSubtitle
+            drinkHeroDescription
+            drinkHeroImages {
+              description
+              file {
+                url
+              }
+            }
+            foodHeroImages {
+              description
+              file {
+                url
+              }
+            }
             heroDescription
             heroImage {
+              description
               file {
                 url
               }
@@ -29,12 +48,37 @@ const HomePage = () => {
         <div>
           {data.allContentfulButcherHomePage.edges.map(edge => {
             return (
-              <HomePageHero
-                title={edge.node.heroTitle}
-                subTitle={edge.node.heroSubtitle}
-                description={edge.node.heroDescription}
-                heroImage={edge.node.heroImage.file.url}
-              />
+              <>
+                <HomePageHero
+                  title={edge.node.heroTitle}
+                  subTitle={edge.node.heroSubtitle}
+                  description={edge.node.heroDescription}
+                  heroImage={edge.node.heroImage.file.url}
+                  alt={edge.node.heroImage.description}
+                />
+                {edge.node.foodHeroImages.map(foodHeroImage => {
+                  return (
+                    <HomePageHero
+                      title={edge.node.foodHeroTitle}
+                      subTitle={edge.node.foodHeroSubtitle}
+                      description={edge.node.foodHeroDescription}
+                      heroImage={foodHeroImage.file.url}
+                      alt={foodHeroImage.description}
+                    />
+                  )
+                })}
+                {edge.node.drinkHeroImages.map(drinkHeroImage => {
+                  return (
+                    <HomePageHero
+                      title={edge.node.drinkHeroTitle}
+                      subTitle={edge.node.drinkHeroSubtitle}
+                      description={edge.node.drinkHeroDescription}
+                      heroImage={drinkHeroImage.file.url}
+                      alt={drinkHeroImage.description}
+                    />
+                  )
+                })}
+              </>
             )
           })}
         </div>

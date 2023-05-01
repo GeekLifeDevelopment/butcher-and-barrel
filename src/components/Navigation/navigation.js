@@ -37,13 +37,16 @@ const Navigation = () => {
             <nav className="main-nav">
               <ul className="butcher-logo">
                 <li>
-                  <img src={edge.node.butcherLogo[1].url} />
+                  <img
+                    src={edge.node.butcherLogo[1].url}
+                    alt="Butcher and Barrel Logo"
+                  />
                 </li>
               </ul>
               <ul className="main-links">
                 <li>Food</li>
                 <li>Drink</li>
-                <li>Barrel Room</li>
+                <li>The Barrel Room</li>
                 <li>Location</li>
               </ul>
               <div onClick={handleClick} className="bars">
@@ -54,7 +57,7 @@ const Navigation = () => {
               <ul>
                 <li>Food</li>
                 <li>Drink</li>
-                <li>Barrel Room</li>
+                <li>The Barrel Room</li>
                 <li>Location</li>
               </ul>
             </nav>
