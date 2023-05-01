@@ -44,10 +44,10 @@ const Navigation = () => {
                 </li>
               </ul>
               <ul className="main-links">
-                <li>Food</li>
-                <li>Drink</li>
-                <li>The Barrel Room</li>
-                <li>Location</li>
+                <li>FOOD</li>
+                <li>DRINKS</li>
+                <li>EVENTS</li>
+                <li>LOCATION</li>
               </ul>
               <div onClick={handleClick} className="bars">
                 <i class={`fa-solid ${navIcon}`}></i>
@@ -57,7 +57,7 @@ const Navigation = () => {
               <ul>
                 <li>Food</li>
                 <li>Drink</li>
-                <li>The Barrel Room</li>
+                <li>Events</li>
                 <li>Location</li>
               </ul>
             </nav>

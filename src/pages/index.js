@@ -18,6 +18,24 @@ const HomePage = () => {
             drinkHeroTitle
             drinkHeroSubtitle
             drinkHeroDescription
+            eventsHeroTitle
+            eventsHeroSubtitle
+            eventsHeroDescription
+            locationHeroTitle
+            locationHeroSubtitle
+            locationHeroDescription
+            locationHeroImages {
+              description
+              file {
+                url
+              }
+            }
+            butcherEventsHeroImages {
+              description
+              file {
+                url
+              }
+            }
             drinkHeroImages {
               description
               file {
@@ -75,6 +93,28 @@ const HomePage = () => {
                       description={edge.node.drinkHeroDescription}
                       heroImage={drinkHeroImage.file.url}
                       alt={drinkHeroImage.description}
+                    />
+                  )
+                })}
+                {edge.node.butcherEventsHeroImages.map(eventHeroImage => {
+                  return (
+                    <HomePageHero
+                      title={edge.node.eventsHeroTitle}
+                      subTitle={edge.node.eventsHeroSubtitle}
+                      description={edge.node.eventsHeroDescription}
+                      heroImage={eventHeroImage.file.url}
+                      alt={eventHeroImage.description}
+                    />
+                  )
+                })}
+                {edge.node.locationHeroImages.map(locationHeroImage => {
+                  return (
+                    <HomePageHero
+                      title={edge.node.locationHeroTitle}
+                      subTitle={edge.node.locationHeroSubtitle}
+                      description={edge.node.locationHeroDescription}
+                      heroImage={locationHeroImage.file.url}
+                      alt={locationHeroImage.description}
                     />
                   )
                 })}

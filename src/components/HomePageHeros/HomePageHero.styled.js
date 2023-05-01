@@ -23,6 +23,7 @@ const HomePageHeroStyled = styled.section`
     right: 0;
     margin: auto;
     transform: translateY(-50%);
+    padding: 0 1rem;
 
     .hero-title {
       animation: show 0.7s linear normal;
@@ -45,10 +46,11 @@ const HomePageHeroStyled = styled.section`
     }
 
     .sub-title {
+      max-width: 545px;
+      margin: 0 auto;
       font-family: "Inter", sans-serif;
       font-weight: 100;
       font-size: 1.2rem;
-      padding: 0;
       animation: sub-animate 0.5s linear normal;
     }
 
