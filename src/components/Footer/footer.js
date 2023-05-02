@@ -1,7 +1,12 @@
 import React from "react"
+import Styles from "./footer.sytled"
 
 const Footer = () => {
-  return <div>Here is my footer</div>
+  return (
+    <Styles>
+      <div>Here is my footer</div>
+    </Styles>
+  )
 }
 
 export default Footer
