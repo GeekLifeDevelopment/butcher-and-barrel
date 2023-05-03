@@ -11,7 +11,6 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Announcments />
         <Navigation />
         <div>
           <main style={{ minHeight: "80vh" }}>{children}</main>
