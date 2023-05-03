@@ -16,13 +16,13 @@ const Announcments = isOpen => {
     }
   `)
   const [openBanner, setOpenBanner] = useState({
-    openBannerOpen: "0",
-    openBannerClose: "-70px",
+    openBannerOpen: "block",
+    openBannerClose: "none",
   })
 
   const handleClose = () => {
     setOpenBanner({
-      openBannerOpen: "-70px",
+      openBannerOpen: "none",
     })
   }
 

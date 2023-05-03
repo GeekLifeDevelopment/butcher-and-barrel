@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const AnouncmentStyles = styled.section`
-  margin-top: ${props => props.isOpen};
+  display: ${props => props.isOpen};
   color: ${props => props.theme.colors.butcherOrange};
   background-color: grey;
   padding: 1rem;
