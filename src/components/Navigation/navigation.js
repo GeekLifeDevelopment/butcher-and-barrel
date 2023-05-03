@@ -9,7 +9,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
     colors: "white",
     imageArray: 1,
     backgroundColor: "transparent",
-    navHeaderBackground: "grey",
+    navHeaderBackground: "#333",
   })
 
   const handleClick = () => {
