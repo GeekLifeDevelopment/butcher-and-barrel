@@ -47,9 +47,9 @@ const NavStyles = styled.nav`
     position: fixed;
     left: ${props => props.navView};
     color: white;
-    z-index: 9;
-    top: 63px;
-    font-size: 2rem;
+    z-index: 12;
+    top: 0;
+    font-size: 1.5rem;
     transition: 0.5s;
 
     ul {
@@ -58,6 +58,7 @@ const NavStyles = styled.nav`
       height: 100%;
       padding: 2rem;
       list-style-type: none;
+      margin: 0;
       li {
         margin-bottom: 1.5rem;
       }
