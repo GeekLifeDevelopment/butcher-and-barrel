@@ -18,11 +18,9 @@ const AnouncmentStyles = styled.section`
     }
 
     .close-btn {
-      color: red;
-      .fa-solid fa-x {
-        color: white;
-        text-align: right;
-      }
+      color: ${props => props.theme.colors.butcherOrange};
+      justify-self: right;
+      margin: 0 0.5rem;
     }
   }
 `
