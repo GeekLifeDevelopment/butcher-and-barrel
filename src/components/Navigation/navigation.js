@@ -7,7 +7,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
   const [navIcon, setNavIcon] = useState("fa-bars")
   const [navStyles, setNavStyles] = useState({
     colors: "white",
-    imageArray: 1,
+    imageArray: 0,
     backgroundColor: "transparent",
     navHeaderBackground: "transparent",
   })
