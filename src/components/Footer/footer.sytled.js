@@ -8,6 +8,10 @@ const FooterStyles = styled.footer`
   margin: 0;
   padding: 0;
 
+  hr {
+    border: 1px solid rgba(51, 51, 51, 70);
+  }
+
   .footer-container {
     display: flex;
     max-width: 1000px;
@@ -17,10 +21,26 @@ const FooterStyles = styled.footer`
 
     ul {
       padding: 0;
+      margin: 0.5rem 0;
       li {
         list-style-type: none;
         font-size: 14px;
       }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+      &:hover {
+        color: ${props => props.theme.colors.butcherOrange};
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 2rem;
     }
   }
 
@@ -33,6 +53,15 @@ const FooterStyles = styled.footer`
   .contact-section {
     li {
     }
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+  }
+
+  .gift-card {
+    font-size: 14px;
   }
 
   .hour-section {
