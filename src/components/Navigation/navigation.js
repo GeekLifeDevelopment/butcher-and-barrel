@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Styles from "./navigation.styled"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 const Navigation = (backgroundColor, colors, navHeaderBackground) => {
   const [navView, setNavView] = useState("-300px")
@@ -9,7 +9,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
     colors: "white",
     imageArray: 1,
     backgroundColor: "transparent",
-    navHeaderBackground: "#333",
+    navHeaderBackground: "transparent",
   })
 
   const handleClick = () => {
@@ -29,14 +29,14 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
       if (y > 0) {
         setNavStyles({
           colors: "black",
-          imageArray: 0,
+          imageArray: 1,
           backgroundColor: "white",
           navHeaderBackground: "#333",
         })
       } else
         setNavStyles({
           colors: "white",
-          imageArray: 1,
+          imageArray: 0,
           backgroundColor: "transparent",
           navHeaderBackground: "transparent",
         })
@@ -49,12 +49,15 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
 
   const data = useStaticQuery(graphql`
     query {
-      allContentfulButcherLogo {
+      allContentfulButcherNavigation {
         edges {
           node {
             butcherLogo {
-              url
+              file {
+                url
+              }
             }
+            headerAnnouncement
           }
         }
       }
@@ -68,27 +71,35 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
       navHeaderBackground={navStyles.navHeaderBackground}
     >
       {/* <Announcments /> */}
-      {data.allContentfulButcherLogo.edges.map(edge => {
+      {data.allContentfulButcherNavigation.edges.map(edge => {
         return (
           <>
             <div className="nav-container">
               <div className="nav-header">
-                <p>Here is some text for this</p>
+                <p>{edge.node.headerAnnouncement}</p>
               </div>
               <nav className="main-nav">
                 <ul className="butcher-logo">
                   <li>
                     <img
-                      src={edge.node.butcherLogo[navStyles.imageArray].url}
+                      src={edge.node.butcherLogo[navStyles.imageArray].file.url}
                       alt="Butcher and Barrel Logo"
                     />
                   </li>
                 </ul>
                 <ul className="main-links">
-                  <li>FOOD</li>
-                  <li>DRINKS</li>
-                  <li>EVENTS</li>
-                  <li>LOCATION</li>
+                  <Link to="#food">
+                    <li>FOOD</li>
+                  </Link>
+                  <Link to="#drinks">
+                    <li>DRINKS</li>
+                  </Link>
+                  <Link to="#events">
+                    <li>EVENTS</li>
+                  </Link>
+                  <Link to="#location">
+                    <li>LOCATION</li>
+                  </Link>
                 </ul>
                 <div onClick={handleClick} className="bars">
                   <i class={`fa-solid ${navIcon}`}></i>
@@ -97,10 +108,18 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
             </div>
             <nav className="mobile-nav">
               <ul>
-                <li>Food</li>
-                <li>Drink</li>
-                <li>Events</li>
-                <li>Location</li>
+                <Link to="#food">
+                  <li>Food</li>
+                </Link>
+                <Link to="#drinks">
+                  <li>Drink</li>
+                </Link>
+                <Link to="#events">
+                  <li>Events</li>
+                </Link>
+                <Link to="#location">
+                  <li>Location</li>
+                </Link>
               </ul>
             </nav>
           </>

@@ -21,13 +21,21 @@ const NavStyles = styled.nav`
 
   .main-nav {
     width: 100%;
-    /* position: fixed; */
     display: flex;
     align-items: center;
     margin: 0;
     background-color: ${props => props.backgroundColor};
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     transition: 1s;
+
+    a {
+      color: ${props => props.colors};
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .butcher-logo {
     width: 15%;
@@ -73,6 +81,11 @@ const NavStyles = styled.nav`
     top: 0;
     font-size: 1.5rem;
     transition: 0.5s;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
 
     ul {
       background-color: rgba(0, 0, 0, 0.8);
