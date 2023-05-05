@@ -25,7 +25,6 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
   useEffect(() => {
     const handleScroll = e => {
       let y = window.scrollY
-      console.log(y)
       if (y > 0) {
         setNavStyles({
           colors: "black",

@@ -5,7 +5,9 @@ import { Link } from "gatsby"
 const Button = ({ title, link }) => {
   return (
     <Styles>
-      <Link to={link}>{title}</Link>
+      <Link to={link} target="_blank">
+        {title}
+      </Link>
     </Styles>
   )
 }

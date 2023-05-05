@@ -13,6 +13,11 @@ const ButtonStyles = styled.a`
   transition: 0.5s;
   cursor: pointer;
 
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.black};
+  }
+
   &:hover {
     color: ${props => props.theme.colors.white};
     background-color: ${props => props.theme.colors.butcherOrange};

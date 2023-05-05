@@ -67,6 +67,7 @@ const HomePage = () => {
           {data.allContentfulButcherHomePage.edges.map(edge => {
             return (
               <>
+                {console.log(edge.node.foodHeroImages.length)}
                 <HomePageHero
                   id="hero"
                   title={edge.node.heroTitle}
@@ -75,21 +76,22 @@ const HomePage = () => {
                   heroImage={edge.node.heroImage.file.url}
                   alt={edge.node.heroImage.description}
                   btnTitle="ORDER ONLINE"
+                  btnLink="https://order.butcherandbarrel.pub/s/order"
                 />
                 <hr className="hero-break" />
-                {edge.node.foodHeroImages.map(foodHeroImage => {
-                  return (
-                    <HomePageHero
-                      id="food"
-                      title={edge.node.foodHeroTitle}
-                      subTitle={edge.node.foodHeroSubtitle}
-                      description={edge.node.foodHeroDescription}
-                      heroImage={foodHeroImage.file.url}
-                      alt={foodHeroImage.description}
-                      btnTitle="FOOD MENU"
-                    />
-                  )
-                })}
+                <>
+                  <HomePageHero
+                    id="food"
+                    title={edge.node.foodHeroTitle}
+                    subTitle={edge.node.foodHeroSubtitle}
+                    description={edge.node.foodHeroDescription}
+                    heroImage={edge.node.foodHeroImages[0].file.url}
+                    heroImage2={edge.node.foodHeroImages[1].file.url}
+                    heroImage3={edge.node.foodHeroImages[2].file.url}
+                    alt={edge.node.foodHeroImages.description}
+                    btnTitle="FOOD MENU"
+                  />
+                </>
                 <hr className="hero-break" />
                 {edge.node.drinkHeroImages.map(drinkHeroImage => {
                   return (

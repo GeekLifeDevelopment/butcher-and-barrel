@@ -3,8 +3,69 @@ import styled from "styled-components"
 const HomePageHeroStyled = styled.section`
   position: relative;
   margin-bottom: 0;
+  display: block;
   width: 100vw;
   height: 100vh;
+
+  .pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    ${props => (props.heroImage2 ? `animation: fade 24s infinite;` : "")}
+  }
+
+  #image1 {
+    animation-delay: 0s;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(${props => props.heroImage});
+  }
+
+  #image2 {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(${props => props.heroImage2});
+    animation-delay: 8s;
+  }
+
+  #image3 {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(${props => props.heroImage3});
+    animation-delay: 16s;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    34% {
+      opacity: 0;
+    }
+    88% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   img {
     width: 100vw;
@@ -12,12 +73,6 @@ const HomePageHeroStyled = styled.section`
     margin: 0;
     padding: 0;
     object-fit: cover;
-  }
-  .overlay {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .hero-content {
@@ -30,18 +85,8 @@ const HomePageHeroStyled = styled.section`
     margin: auto;
     transform: translateY(-50%);
     padding: 0 1rem;
-
-    .hero-title {
-      animation: show 0.7s linear normal;
-    }
-
-    @keyframes show {
-      0% {
-        margin-top: -180px;
-      }
-      5% {
-        margin-top: -160px;
-      }
+    @media (max-width: 570px) {
+      top: 60%;
     }
 
     h1 {
@@ -60,15 +105,6 @@ const HomePageHeroStyled = styled.section`
       animation: sub-animate 0.5s linear normal;
     }
 
-    @keyframes sub-animate {
-      0% {
-        margin-top: -180px;
-      }
-      5% {
-        margin-top: -160px;
-      }
-    }
-
     .sub-description {
       font-family: "Inter", sans-serif;
       font-weight: 100;
@@ -78,12 +114,42 @@ const HomePageHeroStyled = styled.section`
       letter-spacing: 5px;
       animation: dec-animate 0.5s linear normal;
     }
-    @keyframes dec-animate {
-      20% {
-        margin-top: -160px;
+
+    .marquee {
+      height: 50px;
+      overflow: hidden;
+      position: relative;
+      margin: 4rem 0;
+      color: white;
+      /* border: 1px solid #4a4a4a; */
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+      p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -moz-animation: scroll-left 2s linear infinite;
+        -webkit-animation: scroll-left 2s linear infinite;
+        animation: scroll-left 20s linear infinite;
       }
-      25% {
-        margin-top: -140px;
+    }
+    @keyframes scroll-left {
+      0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+      }
+      100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
       }
     }
   }
