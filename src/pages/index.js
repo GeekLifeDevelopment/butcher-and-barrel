@@ -24,6 +24,21 @@ const HomePage = () => {
             locationHeroTitle
             locationHeroSubtitle
             locationHeroDescription
+            homePageHeroMarquee {
+              homePageHeroMarquee
+            }
+            foodMarquee {
+              foodMarquee
+            }
+            drinkMarquee {
+              drinkMarquee
+            }
+            eventsMarquee {
+              eventsMarquee
+            }
+            locationMarquee {
+              locationMarquee
+            }
             locationHeroImages {
               description
               file {
@@ -70,13 +85,20 @@ const HomePage = () => {
                 {console.log(edge.node.foodHeroImages.length)}
                 <HomePageHero
                   id="hero"
-                  title={edge.node.heroTitle}
+                  title={
+                    edge.node.heroTitle === "na" ? "" : edge.node.heroTitle
+                  }
                   subTitle={edge.node.heroSubtitle}
                   description={edge.node.heroDescription}
                   heroImage={edge.node.heroImage.file.url}
                   alt={edge.node.heroImage.description}
                   btnTitle="ORDER ONLINE"
                   btnLink="https://order.butcherandbarrel.pub/s/order"
+                  marquee={
+                    edge.node.homePageHeroMarquee.homePageHeroMarquee === "na"
+                      ? ""
+                      : edge.node.homePageHeroMarquee.homePageHeroMarquee
+                  }
                 />
                 <hr className="hero-break" />
                 <>
@@ -90,6 +112,11 @@ const HomePage = () => {
                     heroImage3={edge.node.foodHeroImages[2].file.url}
                     alt={edge.node.foodHeroImages.description}
                     btnTitle="FOOD MENU"
+                    marquee={
+                      edge.node.foodMarquee.foodMarquee === "na"
+                        ? ""
+                        : edge.node.foodMarquee.foodMarquee
+                    }
                   />
                 </>
                 <hr className="hero-break" />
@@ -103,6 +130,11 @@ const HomePage = () => {
                       heroImage={drinkHeroImage.file.url}
                       alt={drinkHeroImage.description}
                       btnTitle="DRINK MENUE"
+                      marquee={
+                        edge.node.drinkMarquee.drinkMarquee === "na"
+                          ? ""
+                          : edge.node.drinkMarquee.drinkMarquee
+                      }
                     />
                   )
                 })}
@@ -117,6 +149,11 @@ const HomePage = () => {
                       heroImage={eventHeroImage.file.url}
                       alt={eventHeroImage.description}
                       btnTitle="INQUIRE"
+                      marquee={
+                        edge.node.eventsMarquee.eventsMarquee === "na"
+                          ? ""
+                          : edge.node.eventsMarquee.eventsMarquee
+                      }
                     />
                   )
                 })}
@@ -131,6 +168,11 @@ const HomePage = () => {
                       heroImage={locationHeroImage.file.url}
                       alt={locationHeroImage.description}
                       btnTitle="SEE MAP"
+                      marquee={
+                        edge.node.locationMarquee.locationMarquee === "na"
+                          ? ""
+                          : edge.node.locationMarquee.locationMarquee
+                      }
                     />
                   )
                 })}

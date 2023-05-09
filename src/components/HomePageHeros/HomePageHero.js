@@ -12,6 +12,7 @@ const HomePageHero = ({
   alt,
   btnTitle,
   btnLink,
+  marquee,
   id,
 }) => {
   return (
@@ -19,6 +20,7 @@ const HomePageHero = ({
       heroImage={heroImage}
       heroImage2={heroImage2}
       heroImage3={heroImage3}
+      marquee={marquee}
     >
       <div id={id} />
       <div className="image-container">
@@ -31,9 +33,9 @@ const HomePageHero = ({
         <h2 className="sub-title">{subTitle}</h2>
         <h6 className="sub-description">{description}</h6>
         <Button title={btnTitle} link={btnLink} />
-        <div className="marquee">
-          <p>Here is the marquee that will scroll across the screen.</p>
-        </div>
+      </div>
+      <div className="marquee">
+        <p>{marquee}</p>
       </div>
     </Styles>
   )

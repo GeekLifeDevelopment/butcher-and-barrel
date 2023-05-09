@@ -85,9 +85,6 @@ const HomePageHeroStyled = styled.section`
     margin: auto;
     transform: translateY(-50%);
     padding: 0 1rem;
-    @media (max-width: 570px) {
-      top: 60%;
-    }
 
     h1 {
       font-family: "PT Serif", serif;
@@ -114,19 +111,44 @@ const HomePageHeroStyled = styled.section`
       letter-spacing: 5px;
       animation: dec-animate 0.5s linear normal;
     }
+  }
 
-    .marquee {
-      height: 50px;
-      overflow: hidden;
-      position: relative;
-      margin: 4rem 0;
+  .marquee {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    margin: 0.5rem 0;
+    color: white;
+    ${props =>
+      props.marquee !== ""
+        ? `border-top: 1px solid rgba(255, 255, 255, 0.4);`
+        : ""}
+    ${props =>
+      props.marquee !== ""
+        ? `border-bottom: 1px solid rgba(255, 255, 255, 0.4);`
+        : ""}
+    
+
+    p {
+      /* position: absolute; */
       color: white;
-      /* border: 1px solid #4a4a4a; */
-      border-top: 1px solid rgba(255, 255, 255, 0.4);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      /* bottom: 0; */
+      width: 100%;
+      line-height: 50px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      -moz-animation: scroll-left 2s linear infinite;
+      -webkit-animation: scroll-left 2s linear infinite;
+      animation: scroll-left 20s linear infinite;
 
-      p {
-        position: absolute;
+      /* positio
+        n: absolute;
         width: 100%;
         height: 100%;
         margin: 0;
@@ -137,20 +159,19 @@ const HomePageHeroStyled = styled.section`
         transform: translateX(100%);
         -moz-animation: scroll-left 2s linear infinite;
         -webkit-animation: scroll-left 2s linear infinite;
-        animation: scroll-left 20s linear infinite;
-      }
+        animation: scroll-left 20s linear infinite; */
     }
-    @keyframes scroll-left {
-      0% {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-      }
-      100% {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-      }
+  }
+  @keyframes scroll-left {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
     }
   }
 `
