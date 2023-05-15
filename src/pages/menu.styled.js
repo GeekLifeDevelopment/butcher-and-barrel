@@ -44,7 +44,7 @@ const MenuStyles = styled.div`
   }
 
   .line-break {
-    border-bottom: 1px solid ${props => props.theme.colors.butcherOrange};
+    border-bottom: 1px solid #ffc107;
     width: 200px;
     margin: 0 auto;
   }
