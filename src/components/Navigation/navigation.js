@@ -10,6 +10,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
     imageArray: 0,
     backgroundColor: "transparent",
     navHeaderBackground: "transparent",
+    borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
   })
 
   const handleClick = () => {
@@ -31,6 +32,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
           imageArray: 1,
           backgroundColor: "white",
           navHeaderBackground: "#333",
+          borderBottom: "1px solid rgba(0, 0, 0, 0.15)",
         })
       } else
         setNavStyles({
@@ -38,6 +40,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
           imageArray: 0,
           backgroundColor: "transparent",
           navHeaderBackground: "transparent",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
         })
     }
     document.addEventListener("scroll", handleScroll, { passive: true })
@@ -68,6 +71,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
       backgroundColor={navStyles.backgroundColor}
       navView={navView}
       navHeaderBackground={navStyles.navHeaderBackground}
+      borderBottom={navStyles.borderBottom}
     >
       {/* <Announcments /> */}
       {data.allContentfulButcherNavigation.edges.map(edge => {

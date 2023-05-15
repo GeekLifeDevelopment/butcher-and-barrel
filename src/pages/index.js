@@ -112,6 +112,7 @@ const HomePage = () => {
                     heroImage3={edge.node.foodHeroImages[2].file.url}
                     alt={edge.node.foodHeroImages.description}
                     btnTitle="FOOD MENU"
+                    btnLink="/menu"
                     marquee={
                       edge.node.foodMarquee.foodMarquee === "na"
                         ? ""
