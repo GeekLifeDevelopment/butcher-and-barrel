@@ -1,7 +1,7 @@
 const colors = {
   white: "#fff",
   black: "#000",
-  butcherOrange: "#ffc107",
+  butcherOrange: "#e1be64",
 }
 
 const theme = {

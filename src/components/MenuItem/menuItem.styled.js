@@ -26,12 +26,16 @@ const MenuItemStyles = styled.div`
     background-color: ${props => props.theme.colors.butcherOrange};
     border-radius: 50%;
     color: white;
-    padding: 1rem;
+    width: 25px;
+    height: 25px;
+    padding: .5rem;
     font-size: 14px;
     text-align: center;
     bottom: -15px;
     left: 50%;
     margin-left: -21px;
+    line-height: 1  px;
   }
+  butcherOrange
 `
 export default MenuItemStyles

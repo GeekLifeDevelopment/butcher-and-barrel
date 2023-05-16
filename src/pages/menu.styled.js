@@ -61,7 +61,7 @@ const MenuStyles = styled.div`
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      margin: 2rem auto;
+      margin: 2rem;
     }
   }
 `

@@ -91,7 +91,7 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
                   </li>
                 </ul>
                 <ul className="main-links">
-                  <Link to="#food">
+                  <Link to="/#food">
                     <li>FOOD</li>
                   </Link>
                   <Link to="#drinks">
