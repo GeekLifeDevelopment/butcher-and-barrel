@@ -130,7 +130,8 @@ const HomePage = () => {
                       description={edge.node.drinkHeroDescription}
                       heroImage={drinkHeroImage.file.url}
                       alt={drinkHeroImage.description}
-                      btnTitle="DRINK MENUE"
+                      btnTitle="DRINK MENU"
+                      btnLink="/drink-menu"
                       marquee={
                         edge.node.drinkMarquee.drinkMarquee === "na"
                           ? ""

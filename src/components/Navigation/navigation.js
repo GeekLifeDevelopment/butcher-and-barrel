@@ -84,10 +84,14 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
               <nav className="main-nav">
                 <ul className="butcher-logo">
                   <li>
-                    <img
-                      src={edge.node.butcherLogo[navStyles.imageArray].file.url}
-                      alt="Butcher and Barrel Logo"
-                    />
+                    <Link to="/">
+                      <img
+                        src={
+                          edge.node.butcherLogo[navStyles.imageArray].file.url
+                        }
+                        alt="Butcher and Barrel Logo"
+                      />
+                    </Link>
                   </li>
                 </ul>
                 <ul className="main-links">
