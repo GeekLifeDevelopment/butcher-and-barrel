@@ -115,6 +115,9 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
             </div>
             <nav className="mobile-nav">
               <ul>
+                <Link to="/">
+                  <li>Home</li>
+                </Link>
                 <Link to="#food">
                   <li>Food</li>
                 </Link>

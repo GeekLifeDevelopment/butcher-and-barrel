@@ -170,6 +170,7 @@ const HomePage = () => {
                       heroImage={locationHeroImage.file.url}
                       alt={locationHeroImage.description}
                       btnTitle="SEE MAP"
+                      btnLink="/location"
                       marquee={
                         edge.node.locationMarquee.locationMarquee === "na"
                           ? ""

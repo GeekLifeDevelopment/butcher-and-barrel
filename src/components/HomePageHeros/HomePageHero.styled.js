@@ -132,9 +132,7 @@ const HomePageHeroStyled = styled.section`
     
 
     p {
-      /* position: absolute; */
       color: white;
-      /* bottom: 0; */
       width: 100%;
       line-height: 50px;
       margin: 0;
@@ -146,20 +144,6 @@ const HomePageHeroStyled = styled.section`
       -moz-animation: scroll-left 2s linear infinite;
       -webkit-animation: scroll-left 2s linear infinite;
       animation: scroll-left 20s linear infinite;
-
-      /* positio
-        n: absolute;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        line-height: 50px;
-        text-align: center;
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-        -moz-animation: scroll-left 2s linear infinite;
-        -webkit-animation: scroll-left 2s linear infinite;
-        animation: scroll-left 20s linear infinite; */
     }
   }
   @keyframes scroll-left {
