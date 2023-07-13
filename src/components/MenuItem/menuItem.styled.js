@@ -34,7 +34,7 @@ const MenuItemStyles = styled.div`
     bottom: -15px;
     left: 50%;
     margin-left: -21px;
-    line-height: 1  px;
+    line-height: 1px;
   }
   butcherOrange
 `
