@@ -98,13 +98,13 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
                   <Link to="/#food">
                     <li>FOOD</li>
                   </Link>
-                  <Link to="#drinks">
+                  <Link to="/#drinks">
                     <li>DRINKS</li>
                   </Link>
-                  <Link to="#events">
+                  <Link to="/#events">
                     <li>EVENTS</li>
                   </Link>
-                  <Link to="#location">
+                  <Link to="/#location">
                     <li>LOCATION</li>
                   </Link>
                 </ul>
@@ -118,16 +118,16 @@ const Navigation = (backgroundColor, colors, navHeaderBackground) => {
                 <Link to="/">
                   <li>Home</li>
                 </Link>
-                <Link to="#food">
+                <Link to="/#food">
                   <li>Food</li>
                 </Link>
-                <Link to="#drinks">
+                <Link to="/#drinks">
                   <li>Drink</li>
                 </Link>
-                <Link to="#events">
+                <Link to="/#events">
                   <li>Events</li>
                 </Link>
-                <Link to="#location">
+                <Link to="/#location">
                   <li>Location</li>
                 </Link>
               </ul>
